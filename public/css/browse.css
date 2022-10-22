@@ -1,0 +1,85 @@
+.main {
+    background-color: var(--viridian-dark);
+    min-height: 100vh;
+}
+
+.flashcards-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding-top: 150px;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background: transparent;
+}
+
+.flashcard {
+    background-color: var(--viridian);
+    margin: 20px 10px;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border: 5px solid black;
+    position: relative;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 10px #0005;
+}
+
+.flashcard-image {
+    position: absolute;
+    display: flex;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashcard-image img {
+    width: 100%;
+}
+
+.flashcard-info {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.flashcard-work {
+    display: none;
+    font-size: 14pt;
+    margin: 5px;
+}
+
+.flashcard-title {
+    font-weight: 600;
+    font-size: 18pt;
+    margin: 5px;
+}
+
+.flashcard .bg-texture {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.flashcard:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.flashcard:hover .flashcard-info {
+    background-color: #00000080;
+    height: 100%;
+}
+
+.flashcard:hover .flashcard-work {
+    display: block;
+}
+
+.flashcard:hover .bg-texture {
+    opacity: 1;
+}

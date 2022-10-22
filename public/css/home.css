@@ -85,3 +85,7 @@
     font-weight: 600;
     z-index: 20;
 }
+
+.home-banner-content-button:hover {
+    background-color: var(--viridian-dark);
+}

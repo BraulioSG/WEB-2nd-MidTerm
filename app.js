@@ -14,14 +14,14 @@ app.set('view engine', 'ejs');
 //public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-//define the main rout for the router
-app.use('/', router);
-
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // parse application/json
 app.use(bodyParser.json());
+
+//define the main rout for the router
+app.use('/', router);
 
 //Start the server
 app.listen(port, () => {
