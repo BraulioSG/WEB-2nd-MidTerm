@@ -1,7 +1,8 @@
-const path = require('path');
-const bodyParser = require('body-parser');
 const express = require('express');
 const router = require('./src/router');
+
+const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.port || 3000; //looks if it has a different environment port
