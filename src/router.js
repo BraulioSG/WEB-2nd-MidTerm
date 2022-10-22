@@ -21,7 +21,7 @@ router.use((_req, _res, next) => {
 
 //home route
 router.get('/', (_req, res) => {
-    res.redirect('/browse');
+    res.send('welcome');
     //res.render(`${__dirname}/views/index`);
 });
 

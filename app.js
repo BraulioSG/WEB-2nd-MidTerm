@@ -26,5 +26,4 @@ app.use('/', router);
 //Start the server
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
-    console.log(`Server at: http://localhost:${port}`);
 });
