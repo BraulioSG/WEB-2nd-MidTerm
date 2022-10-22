@@ -1,2 +1,44 @@
-<h1>Hello World</h1>
-<p><%= result %></p>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head', { subtitle : 'Home'}) %>
+        <link rel="stylesheet" href="./css/home.css" />
+    </head>
+    <body>
+        <div class="main">
+            <div class="home-banner">
+                <div class="home-banner-image">
+                    <div class="blur-filter"></div>
+                    <span class="home-banner-image-legend">
+                        Photo by
+                        <a href="https://unsplash.com/photos/tNO5weLNt-E">
+                            Erik Mclean
+                        </a>
+                    </span>
+                </div>
+                <div class="home-banner-container">
+                    <div class="home-banner-content">
+                        <div class="bg-texture"></div>
+                        <h1
+                            class="home-banner-content-heading comic-heading text-3d"
+                        >
+                            Super Hero API
+                        </h1>
+                        <p
+                            class="home-banner-content-text outline-text"
+                            style="--text-border: #fff"
+                        >
+                            A superhero catalog, base on one of the most popular
+                            APIs all around the globe. Explore all the
+                            characters this API have and start browsing on this
+                            catalog. Try it now!
+                        </p>
+                        <a class="home-banner-content-button" href="/browse">
+                            Start Browsing
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
