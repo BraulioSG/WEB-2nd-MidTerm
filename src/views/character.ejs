@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head', {subtitle: data.name})%>
+        <link rel="stylesheet" href="/css/character.css" />
+    </head>
+    <body>
+        <div class="main">
+            <%- include('./partials/browseform') %>
+            <div class="character">
+                <div class="character-content" data-aos="zoom-in-up">
+                    <div class="character-line character-top-line">
+                        <div class="character-image">
+                            <img
+                                src="<%= data.images.md %> "
+                                alt="<%= data.biography.fullName %>"
+                                class="character-image-img"
+                            />
+                        </div>
+                        <div class="character-data">
+                            <div class="character-info">
+                                <h1
+                                    class="character-title comic-heading text-3d"
+                                >
+                                    <%= data.name %>
+                                </h1>
+                                <p class="character-info-field">
+                                    <%= data.biography.fullName %>
+                                </p>
+                                <p class="character-info-field">
+                                    <%= data.work.base %>
+                                </p>
+                                <p class="character-info-field">
+                                    <%= data.work.occupation%>
+                                </p>
+                            </div>
+                            <div class="character-power">
+                                <span class="character-power-label"
+                                    >Intelligence</span
+                                >
+                                <div class="character-power-field">
+                                    <div
+                                        class="character-power-field-bar"
+                                    ></div>
+                                    <div
+                                        class="character-power-field-meter"
+                                        style="
+                                            --progress: <%=data.powerstats.intelligence%>;
+                                        "
+                                    ></div>
+                                </div>
+                                <span class="character-power-label"
+                                    >Strength</span
+                                >
+                                <div class="character-power-field">
+                                    <div
+                                        class="character-power-field-bar"
+                                    ></div>
+                                    <div
+                                        class="character-power-field-meter"
+                                        style="
+                                            --progress: <%=data.powerstats.strength%>;
+                                        "
+                                    ></div>
+                                </div>
+                                <span class="character-power-label">Speed</span>
+                                <div class="character-power-field">
+                                    <div
+                                        class="character-power-field-bar"
+                                    ></div>
+                                    <div
+                                        class="character-power-field-meter"
+                                        style="
+                                            --progress: <%=data.powerstats.speed%>;
+                                        "
+                                    ></div>
+                                </div>
+                                <span class="character-power-label"
+                                    >durability</span
+                                >
+                                <div class="character-power-field">
+                                    <div
+                                        class="character-power-field-bar"
+                                    ></div>
+                                    <div
+                                        class="character-power-field-meter"
+                                        style="
+                                            --progress: <%=data.powerstats.durability%>;
+                                        "
+                                    ></div>
+                                </div>
+                                <span class="character-power-label">Power</span>
+                                <div class="character-power-field">
+                                    <div
+                                        class="character-power-field-bar"
+                                    ></div>
+                                    <div
+                                        class="character-power-field-meter"
+                                        style="
+                                            --progress: <%=data.powerstats.power%>;
+                                        "
+                                    ></div>
+                                </div>
+                                <span class="character-power-label"
+                                    >Combat</span
+                                >
+                                <div class="character-power-field">
+                                    <div
+                                        class="character-power-field-bar"
+                                    ></div>
+                                    <div
+                                        class="character-power-field-meter"
+                                        style="
+                                            --progress: <%=data.powerstats.combat%>;
+                                        "
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <a href="/character/<%= prev %>" class="nav-buttons-button">
+                    Prev
+                </a>
+                <a href="/character/<%= next %>" class="nav-buttons-button">
+                    Next
+                </a>
+            </div>
+        </div>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head', { subtitle : 'Browse'}) %>
+        <link rel="stylesheet" href="./css/browse.css" />
+    </head>
+    <body>
+        <div class="main">
+            <%- include('./partials/browseform') %>
+            <div class="flashcards-container">
+                <% response.map((sh) => {%> <%-include('./partials/flashcard',{
+                id:sh.id, img:sh.images.sm, name:sh.name, job:
+                sh.work.occupation})%> <%})%>
+            </div>
+        </div>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
