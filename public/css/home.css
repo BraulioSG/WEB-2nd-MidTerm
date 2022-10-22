@@ -1,0 +1,87 @@
+.main {
+    width: 100vw;
+    height: fit-content;
+    min-height: 100vh;
+
+    background: var(--honeydew);
+}
+
+.home-banner {
+    width: 100%;
+    position: relative;
+}
+
+.home-banner-image {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('/assets/images/home-banner.jpg');
+    background-position: top;
+    background-size: cover;
+    background-position: fixed;
+    backdrop-filter: blur(5px);
+    position: relative;
+}
+
+.home-banner-image-legend {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+}
+
+.home-banner-image-legend a {
+    color: white;
+    font-weight: 500;
+}
+
+.home-banner-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-banner-content {
+    background: var(--white);
+    border: 15px solid black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    max-width: 800px;
+    padding: 20px;
+    overflow: hidden;
+    background: var(--yellow);
+}
+
+.home-banner-content-heading {
+    color: white;
+    font-size: 4rem;
+    z-index: 20;
+}
+
+.home-banner-content-text {
+    color: black;
+    font-weight: 900;
+    font-family: cursive;
+    font-size: 1.5rem;
+    margin: 30px 0;
+    z-index: 20;
+}
+
+.home-banner-content-button {
+    display: inline;
+    width: fit-content;
+    padding: 15px;
+    border: 5px solid black;
+    font-size: 1.3rem;
+    background-color: var(--viridian);
+    color: white;
+    font-weight: 600;
+    z-index: 20;
+}
