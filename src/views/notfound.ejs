@@ -3,7 +3,33 @@
     <head>
         <%- include('./partials/head', {subtitle: 'Not Found'}) %>
     </head>
-    <body>
-        <h1>PAGE NOT FOUND :(</h1>
+    <body style="background-color: var(--viridian)">
+        <style>
+            body {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            h1 {
+                color: white;
+                font-size: 48pt;
+                text-align: center;
+            }
+
+            a {
+                padding: 20px 30px;
+                color: black;
+                font-weight: 800;
+                font-size: 12pt;
+                background-color: var(--saffron);
+                border: 5px solid black;
+                margin-top: 20px;
+            }
+        </style>
+        <h1 class="comic-heading text-3d">404 <br />PAGE NOT FOUND :(</h1>
+        <a href="/">Return Home</a>
     </body>
 </html>
